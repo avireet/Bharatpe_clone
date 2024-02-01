@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(233, 233, 233);
+        }
+        
+        .navbar {
+            height: 80px;
+            background-color: white;
+            overflow: hidden;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color:transparent;
+            color: black;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            margin: 4vh 25vh;
+            width: 1150px;
+            justify-content: center;
+            box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.16);
+        }
+        
+        .left-side {
+            flex: 1;
+            border-radius: 8px;
+            justify-content: center;
+            padding: 4.5% 0 4.7% 3.5%;
+            background-color: #00d8e7;
+            color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+        }
+        
+        .right-side {
+            flex: 1;
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+        
+        .form-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        
+        .form-container h2 {
+            text-align: left;
+            color: #333;
+            font-size: 30px;
+        }
+        
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-container label {
+            margin-bottom: 8px;
+        }
+        
+        .form-container input {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-container button {
+            background-color: #00d8e7;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 30%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+        
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #00d8e7;
+        }
+        
+        .popup .close:hover {
+            color: #00AFCB;
+        }
+        
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+        }
+        
+        .ak {
+            width: 100%;
+            padding: 120px 10px 8px 8px;
+            border-radius: 4px;
+            border: none;
+            font-weight: 500;
+            font-size: 1rem;
+            outline: none;
+            cursor: text;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .box {
+                width: 70%;
+            }
+        
+            .popup {
+                width: 70%;
+            }
+        }
+        
+        a.hover {
+            background-color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="1bharatpe.html" style="margin-left:200px"><img src="img1-darklogo.svg"></a>
+    </div>
+
+    <div class="container">
+        <div class="left-side">
+            <!-- Left side content, e.g., image or other information -->
+            <h1>BharatPe Lagao
+            <br>Dhandha Badhao
+            </h1>
+            <ul>
+                <a><img src="img9-freepay.svg">Accept payments for FREE</a><br>
+                <a><img src="img10-interest.svg">Earn upto 12% Interest</a><br>
+                <a><img src="img11-loans.svg">Get Instant Loans</a>
+                <img src="img12-signin.svg">
+            </ul>
+        </div>
+        <div class="right-side">
+            <!-- Right side content, e.g., login form -->
+            <div class="form-container">
+                <h2>Login with Username</h2>
+                <a href="4newtobharatpe.html"style="color:#00afcb; font-size: 12px;font-weight:799;padding-left: 300px; text-decoration:none;">New to BharatPe</a>
+                <form action="#">
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password"><a href="#popup1"style="color:#00afcb; font-size: 12px;padding-left: 250px;
+                    margin-bottom:5px; text-decoration:none;font-weight:600;">Forgot Password</a>
+                    
+                    <button type="submit" style="background-color: #00AFCB;">Login</button>
+                <h3 STYLE="text-align: center;">OR</h3>
+                </form>    
+                    <h2 style="font-size: 28px;">Login with OTP</h2>
+                <form action="#">   
+                    <input type="number" id="mobile" name="mobilr" placeholder="Mobile">
+                    <button type="submit" style="background-color: #00AFCB;">Request OTP</button></form>
+                <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <h2 style="font-size: 19px;">Forgot Your Password?</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="form-container">
+                          <div class="form-container2">
+                            <form action="#">
+                                <input class="ak" type="text" id="username" name="username" placeholder="Username">
+                                <input class="ak" type="text" id="new" name="new" placeholder="New Password">
+                                <input class="ak" type="text" id="reenter" name="reenter" placeholder="Re-enter new Password">
+                                <button type="submit" style="background-color: #00AFCB;font-weight:700;">Reset</button></form></div>
+                          </div>
+                            </div>
+                        </div></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
